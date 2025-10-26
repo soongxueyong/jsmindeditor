@@ -2023,6 +2023,11 @@
             if (!!node.topic) {
                 this.render_node(element, node);
             }
+            if (node.data.link && typeof node.data.link === 'string' && node.data.link.trim() !== '') {
+                element.setAttribute('nodelink', node.data.link);
+            } else {
+                element.removeAttribute('nodelink');
+            }
             if (this.layout.is_visible(node)) {
                 view_data.width = element.clientWidth;
                 view_data.height = element.clientHeight;

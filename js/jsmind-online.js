@@ -322,10 +322,7 @@
         const newTopic = document.getElementById('topicInput').value.trim();
         const newLink = document.getElementById('linkInput').value.trim();
 
-        // 更新节点主题
-        if (newTopic) {
-            _jm.update_node(currentNode.id, newTopic);
-        }
+
 
         // 更新节点链接（数据属性）
         if (newLink) {
@@ -338,6 +335,13 @@
         }
 
         // 刷新节点显示
+        // 更新节点主题
+        if (newTopic) {
+            _jm.update_node(currentNode.id, newTopic);
+        } else{
+            alert("节点主题不能为空，请输入内容后再提交！");
+        }
+
 
 
         // 切回预览模式：重新加载节点信息，编辑按钮恢复禁用（需再次获取节点激活）
