@@ -1,0 +1,325 @@
+{
+  "meta": {
+    "name": "docker-knowledge-map",
+    "author": "tech-assistant",
+    "version": "1.1"
+  },
+  "format": "node_tree",
+  "data": {
+    "id": "root",
+    "topic": "Docker 容器技术",
+    "expanded": true,
+    "children": [
+      {
+        "id": "basic-def",
+        "topic": "基础定义",
+        "expanded": true,
+        "direction": "left",
+        "children": [
+          {
+            "id": "what-is",
+            "topic": "本质: 开源应用容器引擎",
+            "expanded": true,
+            "link": "https://docs.docker.com/get-started/overview/"
+          },
+          {
+            "id": "core-value",
+            "topic": "核心价值: 「一次构建，到处运行」",
+            "expanded": true,
+            "link": "https://www.docker.com/why-docker"
+          },
+          {
+            "id": "compared-vm",
+            "topic": "与虚拟机差异: 轻量、启动快、资源占用低",
+            "expanded": true,
+            "link": "https://www.docker.com/resources/what-container"
+          }
+        ]
+      },
+      {
+        "id": "core-concepts",
+        "topic": "核心概念",
+        "expanded": true,
+        "direction": "right",
+        "background-color": "#2ecc71",
+        "leading-line-color": "#27ae60",
+        "children": [
+          {
+            "id": "image",
+            "topic": "镜像 (Image)",
+            "expanded": true,
+            "children": [
+              {
+                "id": "image-feat1",
+                "topic": "只读模板，容器的基础",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/images/"
+              },
+              {
+                "id": "image-feat2",
+                "topic": "可通过 Dockerfile 构建",
+                "expanded": true,
+                "link": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/"
+              },
+              {
+                "id": "image-registry",
+                "topic": "存储仓库: Docker Hub、私有仓库",
+                "expanded": true,
+                "link": "https://hub.docker.com/"
+              }
+            ]
+          },
+          {
+            "id": "container",
+            "topic": "容器 (Container)",
+            "expanded": true,
+            "children": [
+              {
+                "id": "container-feat1",
+                "topic": "镜像的运行实例，可读写",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/container/"
+              },
+              {
+                "id": "container-feat2",
+                "topic": "独立网络、存储空间",
+                "expanded": true,
+                "link": "https://docs.docker.com/storage/"
+              },
+              {
+                "id": "container-state",
+                "topic": "状态: 运行、停止、暂停、删除",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/ps/"
+              }
+            ]
+          },
+          {
+            "id": "dockerfile",
+            "topic": "Dockerfile",
+            "expanded": true,
+            "children": [
+              {
+                "id": "dockerfile-role",
+                "topic": "构建镜像的文本指令集",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/builder/"
+              },
+              {
+                "id": "common-cmd",
+                "topic": "常用指令: FROM、RUN、COPY、CMD",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/builder/#from"
+              }
+            ]
+          },
+          {
+            "id": "compose",
+            "topic": "Docker Compose",
+            "expanded": true,
+            "children": [
+              {
+                "id": "compose-role",
+                "topic": "定义/运行多容器应用的工具",
+                "expanded": true,
+                "link": "https://docs.docker.com/compose/"
+              },
+              {
+                "id": "compose-file",
+                "topic": "配置文件: docker-compose.yml",
+                "expanded": true,
+                "link": "https://docs.docker.com/compose/compose-file/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "common-commands",
+        "topic": "常用命令",
+        "expanded": true,
+        "direction": "right",
+        "children": [
+          {
+            "id": "image-cmds",
+            "topic": "镜像相关",
+            "expanded": true,
+            "children": [
+              {
+                "id": "cmd-pull",
+                "topic": "docker pull [镜像名]: 拉取镜像",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/pull/"
+              },
+              {
+                "id": "cmd-build",
+                "topic": "docker build -t [名]: 构建镜像",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/build/"
+              },
+              {
+                "id": "cmd-images",
+                "topic": "docker images: 查看本地镜像",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/images/"
+              },
+              {
+                "id": "cmd-rmi",
+                "topic": "docker rmi [镜像ID]: 删除镜像",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/rmi/"
+              }
+            ]
+          },
+          {
+            "id": "container-cmds",
+            "topic": "容器相关",
+            "expanded": true,
+            "children": [
+              {
+                "id": "cmd-run",
+                "topic": "docker run [选项] [镜像]: 创建并启动",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/run/"
+              },
+              {
+                "id": "cmd-ps",
+                "topic": "docker ps: 查看运行容器",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/ps/"
+              },
+              {
+                "id": "cmd-start-stop",
+                "topic": "docker start/stop [容器ID]: 启停",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/start/"
+              },
+              {
+                "id": "cmd-exec",
+                "topic": "docker exec -it [容器ID] [命令]: 进入容器",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/exec/"
+              },
+              {
+                "id": "cmd-rm",
+                "topic": "docker rm [容器ID]: 删除容器",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/reference/commandline/rm/"
+              }
+            ]
+          },
+          {
+            "id": "compose-cmds",
+            "topic": "Compose 相关",
+            "expanded": true,
+            "children": [
+              {
+                "id": "cmd-up",
+                "topic": "docker-compose up: 启动服务",
+                "expanded": true,
+                "link": "https://docs.docker.com/compose/reference/up/"
+              },
+              {
+                "id": "cmd-down",
+                "topic": "docker-compose down: 停止并删除",
+                "expanded": true,
+                "link": "https://docs.docker.com/compose/reference/down/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "topic": "核心架构",
+        "expanded": true,
+        "direction": "left",
+        "children": [
+          {
+            "id": "client",
+            "topic": "Docker Client",
+            "expanded": true,
+            "children": [
+              {
+                "id": "client-role",
+                "topic": "用户交互入口，发送命令（如 docker run）",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/architecture/#docker-client"
+              }
+            ]
+          },
+          {
+            "id": "daemon",
+            "topic": "Docker Daemon",
+            "expanded": true,
+            "children": [
+              {
+                "id": "daemon-role",
+                "topic": "后台服务，管理镜像、容器生命周期",
+                "expanded": true,
+                "link": "https://docs.docker.com/engine/architecture/#docker-daemon"
+              }
+            ]
+          },
+          {
+            "id": "engine-components",
+            "topic": "核心组件",
+            "expanded": true,
+            "children": [
+              {
+                "id": "containerd",
+                "topic": "containerd: 管理容器生命周期",
+                "expanded": true,
+                "link": "https://containerd.io/"
+              },
+              {
+                "id": "runc",
+                "topic": "runc: 运行容器的底层工具",
+                "expanded": true,
+                "link": "https://github.com/opencontainers/runc"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "application-scenarios",
+        "topic": "应用场景",
+        "expanded": true,
+        "direction": "left",
+        "children": [
+          {
+            "id": "dev-env",
+            "topic": "开发环境一致性",
+            "expanded": true,
+            "link": "https://docs.docker.com/develop/develop-images/local-development/"
+          },
+          {
+            "id": "ci-cd",
+            "topic": "CI/CD 流水线集成",
+            "expanded": true,
+            "link": "https://docs.docker.com/ci-cd/"
+          },
+          {
+            "id": "microservices",
+            "topic": "微服务部署",
+            "expanded": true,
+            "link": "https://docs.docker.com/guides/microservices-architecture/"
+          },
+          {
+            "id": "testing",
+            "topic": "自动化测试环境",
+            "expanded": true,
+            "link": "https://docs.docker.com/guides/test-containers/"
+          },
+          {
+            "id": "cloud-deploy",
+            "topic": "云原生应用交付",
+            "expanded": true,
+            "link": "https://www.docker.com/cloud-native-app-development"
+          }
+        ]
+      }
+    ]
+  }
+}
